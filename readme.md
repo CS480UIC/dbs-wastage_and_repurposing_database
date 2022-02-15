@@ -3,9 +3,9 @@
 1. [Author(s)](#author)
 1. [Database description](#description)
 # Database
-DATABASE NAME
+wastage_and_repurposing_database
 # Author(s)
-AUTHOR1
-AUTHOR2
+Joseph Lenaghan
+Adam Vanberkum
 # Database description
-Write the database description and requirements here
+A database intended to store information regarding waste disposal, retention, and repurposing in an easy to access consistently updated database.
