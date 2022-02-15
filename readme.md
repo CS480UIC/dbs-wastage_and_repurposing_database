@@ -6,6 +6,6 @@
 wastage_and_repurposing_database
 # Author(s)
 Joseph Lenaghan
-Adam Vanberkum
+Alex Vanberkum
 # Database description
 A database intended to store information regarding waste disposal, retention, and repurposing in an easy to access consistently updated database.
