@@ -41,3 +41,44 @@ Attributes of wastefacility
 attribute one: address -> unique maxima | required minima
 attribute two: id -> unique maxima | required minima
 attribute three: wastetypeprocessed -> singualr maxima | required minima
+
+---------------------------------------------------------
+Relationships for table State
+There is one Primary Key for the table State (ID) that is referenced by County's Foreign Key 
+
+Relationships for table County
+There is one Primary Key for the table County (ID) that is referenced by Waste's CountyID Foreign Key
+Also, There is one Foreign Key for the table County (StateID) which references the Primary Key of State. Upon updating State's Primary Key,
+the Foreign Key will cascade those results. On deletion, the deletion will also be reflected in County.
+
+Relationships for table Waste
+waste has one Foreign Key that references County's Primary Key (ID). Upon updating, The Foreign Key will cascade the results into Waste. On deletion of the Primary Key,
+this deletion will also be reflected in Waste.
+
+Relationships for WasteFacility
+WasteFacility has one Primary Key which is referenced by the Foreign Key belonging to WasteManagement.
+WasteFacility also has a Foreign Key that references the Primary Key of County. Upon updating the Primary Key, these results will be cascaded into WasteFacility.
+Upon deletion, the deletion will also be reflected in WasteFacility.
+
+Relationships for Wastemanagement
+Wastemanagement has one Foreign Key that references the Primary Key of WasteFacility. When the Primary Key updates, these updates will cascade into Wastemanagement. On deletion, the deletion should also be reflected in Wastemanagement.
+
+---------------------------------------------------------
+
+The supertype of this database is State
+the subtypes of this database are County, WasteFacility, Waste, and WasteManagement
+
+---------------------------------------------------------
+
+All of the attributes maintained in this database are primarily integers, save 4 exceptions, which are StateName,CountyName, WasteTypeProcessed, and RecycleOrDump.
+
+---------------------------------------------------------
+
+The only plural attribute in the Database is WasteTypeProcessed which can have many types, paper,plastic,metal,organic, and glass. This attribute is a member of the table wastefacility and is a means of differentiating the possible waste types being processed by a particular facility.
+
+---------------------------------------------------------
+
+All of the Primary Keys in the Database are explicility NOT NULL. The case is the same for the two totalWaste values that must also be NOT NULL, as they are responsible for
+holding the total amount of waste, both managed, and produced.
+
+---------------------------------------------------------
