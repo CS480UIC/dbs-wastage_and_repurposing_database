@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update County</h1>
 <form action="<c:url value='/CountyServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update CountyID   :<input type="text" name="CountyID" value="${form.CountyID }"/>
