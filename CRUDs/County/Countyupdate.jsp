@@ -24,17 +24,8 @@
   <h1>Update County</h1>
 <form action="<c:url value='/CountyServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update CountyID   :<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
-	<br/>
-	Update StateID   :<input type="text" name="StateID" value="${form.StateID }"/>
-	<span style="color: red; font-weight: 900">${errors.StateID }</span>
-	<br/>
-	Update CountyName   :<input type="text" name="CountyName" value="${form.CountyName }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyName }</span>
-	<br/>
-	Update Population   :<input type="text" name="Population" value="${form.Population }"/>
-	<span style="color: red; font-weight: 900">${errors.Population }</span>
+	Update countyID   :<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
 	<input type="submit" value="Update County"/>
 </form>

@@ -23,26 +23,26 @@
   <body>
   <h1>Waste Create</h1>
 <form action="<c:url value='/WasteServletCreate'/>" method="post">
-	Totalwaste：<input type="text" name="Totalwaste" value="${form.Totalwaste }"/>
-	<span style="color: red; font-weight: 900">${errors.Totalwaste }</span>
+	totalwaste：<input type="text" name="totalwaste" value="${form.totalwaste }"/>
+	<span style="color: red; font-weight: 900">${errors.totalwaste }</span>
 	<br/>
-	CountyID	：<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
+	countyID	：<input type="text" name="Countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
-	Organic	：<input type="text" name="Organic" value="${form.Organic }"/>
-	<span style="color: red; font-weight: 900">${errors.Organic }</span>
+	organic	：<input type="text" name="organic" value="${form.organic }"/>
+	<span style="color: red; font-weight: 900">${errors.organic }</span>
 	<br/>
-	Plastic	：<input type="text" name="Plastic" value="${form.Plastic }"/>
-	<span style="color: red; font-weight: 900">${errors.Plastic }</span>
+	plastic	：<input type="text" name="plastic" value="${form.plastic }"/>
+	<span style="color: red; font-weight: 900">${errors.plastic }</span>
 	<br/>
-	Metal	：<input type="text" name="Metal" value="${form.Metal }"/>
-	<span style="color: red; font-weight: 900">${errors.Metal }</span>
+	metal	：<input type="text" name="metal" value="${form.metal }"/>
+	<span style="color: red; font-weight: 900">${errors.metal }</span>
 	<br/>
-	Glass	：<input type="text" name="Glass" value="${form.Glass }"/>
-	<span style="color: red; font-weight: 900">${errors.Glass }</span>
+	glass	：<input type="text" name="glass" value="${form.glass }"/>
+	<span style="color: red; font-weight: 900">${errors.glass }</span>
 	<br/>
-	Paper	：<input type="text" name="Paper" value="${form.Paper }"/>
-	<span style="color: red; font-weight: 900">${errors.Paper }</span>
+	paper	：<input type="text" name="paper" value="${form.paper }"/>
+	<span style="color: red; font-weight: 900">${errors.paper }</span>
 	<br/>
 	<input type="submit" value="Waste Create"/>
 </form>

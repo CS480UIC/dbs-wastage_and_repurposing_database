@@ -24,27 +24,11 @@
   <h1>Update Waste</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Totalwaste：<input type="text" name="Totalwaste" value="${form.Totalwaste }"/>
-	<span style="color: red; font-weight: 900">${errors.Totalwaste }</span>
+	
+	Update countyID	：<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
-	Update CountyID	：<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
-	<br/>
-	Update Organic	：<input type="text" name="Organic" value="${form.Organic }"/>
-	<span style="color: red; font-weight: 900">${errors.Organic }</span>
-	<br/>
-	Update Plastic	：<input type="text" name="Plastic" value="${form.Plastic }"/>
-	<span style="color: red; font-weight: 900">${errors.Plastic }</span>
-	<br/>
-	Update Metal	：<input type="text" name="Metal" value="${form.Metal }"/>
-	<span style="color: red; font-weight: 900">${errors.Metal }</span>
-	<br/>
-	Update Glass	：<input type="text" name="Glass" value="${form.Glass }"/>
-	<span style="color: red; font-weight: 900">${errors.Glass }</span>
-	<br/>
-	Update Paper	：<input type="text" name="Paper" value="${form.Paper }"/>
-	<span style="color: red; font-weight: 900">${errors.Paper }</span>
-	<br/>
+	
 	<input type="submit" value="Update Waste"/>
 </form>
   </body>

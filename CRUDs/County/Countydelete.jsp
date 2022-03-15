@@ -24,17 +24,8 @@
   <h1>Delete County</h1>
 <form action="<c:url value='/CountyServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete CountyID   :<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
-	<br/>
-	Delete StateID   :<input type="text" name="StateID" value="${form.StateID }"/>
-	<span style="color: red; font-weight: 900">${errors.StateID }</span>
-	<br/>
-	Delete CountyName   :<input type="text" name="CountyName" value="${form.CountyName }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyName }</span>
-	<br/>
-	Delete Population   :<input type="text" name="Population" value="${form.Population }"/>
-	<span style="color: red; font-weight: 900">${errors.Population }</span>
+	Delete countyID   :<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
 	<input type="submit" value="Delete County"/>
 </form>

@@ -23,17 +23,17 @@
   <body>
   <h1>County Create</h1>
 <form action="<c:url value='/CountyServletCreate'/>" method="post">
-	CountyID    :<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
+	countyID    :<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
-	StateID：<input type="text" name="StateID" value="${form.StateID }"/>
-	<span style="color: red; font-weight: 900">${errors.StateID }</span>
+	stateID：<input type="text" name="stateid" value="${form.stateID }"/>
+	<span style="color: red; font-weight: 900">${errors.stateID }</span>
 	<br/>
-	CountyName	：<input type="text" name="CountyName" value="${form.CountyName }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyName }</span>
+	countyname	：<input type="text" name="countyname" value="${form.countyname }"/>
+	<span style="color: red; font-weight: 900">${errors.countyname }</span>
 	<br/>
-	Population	：<input type="text" name="Population" value="${form.Population }"/>
-	<span style="color: red; font-weight: 900">${errors.Population }</span>
+	population	：<input type="text" name="population" value="${form.population }"/>
+	<span style="color: red; font-weight: 900">${errors.population }</span>
 	<br/>
 	<input type="submit" value="County Create"/>
 </form>

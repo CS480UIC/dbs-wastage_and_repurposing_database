@@ -25,17 +25,8 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/CountyServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	CountyID    :<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
-	<br/>
-	StateID    :<input type="text" name="StateID" value="${form.StateID }"/>
-	<span style="color: red; font-weight: 900">${errors.StateID }</span>
-	<br/>
-	CountyName    :<input type="text" name="CountyName" value="${form.CountyName }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyName }</span>
-	<br/>
-	Population    :<input type="text" name="Population" value="${form.Population }"/>
-	<span style="color: red; font-weight: 900">${errors.Population }</span>
+	countyID    :<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

@@ -25,26 +25,8 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/WasteServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Totalwaste：<input type="text" name="Totalwaste" value="${form.Totalwaste }"/>
-	<span style="color: red; font-weight: 900">${errors.Totalwaste }</span>
-	<br/>
-	CountyID	：<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
-	<br/>
-	Organic	：<input type="text" name="Organic" value="${form.Organic }"/>
-	<span style="color: red; font-weight: 900">${errors.Organic }</span>
-	<br/>
-	Plastic	：<input type="text" name="Plastic" value="${form.Plastic }"/>
-	<span style="color: red; font-weight: 900">${errors.Plastic }</span>
-	<br/>
-	Metal	：<input type="text" name="Metal" value="${form.Metal }"/>
-	<span style="color: red; font-weight: 900">${errors.Metal }</span>
-	<br/>
-	Glass	：<input type="text" name="Glass" value="${form.Glass }"/>
-	<span style="color: red; font-weight: 900">${errors.Glass }</span>
-	<br/>
-	Paper	：<input type="text" name="Paper" value="${form.Paper }"/>
-	<span style="color: red; font-weight: 900">${errors.Paper }</span>
+	countyID	：<input type="text" name="countyid" value="${form.countyID }"/>
+	<span style="color: red; font-weight: 900">${errors.countyID }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
