@@ -44,11 +44,11 @@
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/Waste/menu.jsp'/>" target="body">CRUD Waste</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/County/menu.jsp'/>" target="body">CRUD County</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/State/menu.jsp'/>" target="body">CRUD State</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/WasteFacility/menu.jsp'/>" target="body">CRUD WasteFacility</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/WasteManagement/menu.jsp'/>" target="body">CRUD WasteManagement</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/waste/menu.jsp'/>" target="body">CRUD Waste</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/county/menu.jsp'/>" target="body">CRUD County</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/state/menu.jsp'/>" target="body">CRUD State</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/wastefacility/menu.jsp'/>" target="body">CRUD WasteFacility</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/wastemanagement/menu.jsp'/>" target="body">CRUD WasteManagement</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>
