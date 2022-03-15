@@ -11,7 +11,7 @@ Alex Vanberkum
 A database intended to store information regarding waste disposal, retention, and repurposing in an easy to access consistently updated database.
 # CRUD for County
 
-![CountyOverall](https://user-images.githubusercontent.com/77464979/158472350-13023cea-272e-4ac3-b441-ca03a84abd44.png)
+![CountyOverall](https://user-images.githubusercontent.com/77464979/158472939-9ef37ce4-3ca7-4213-a02a-8fc911b33071.png)
 ![CountyCreate](https://user-images.githubusercontent.com/77464979/158274076-81365ca6-c10e-493c-ba7a-4f08a8cb93df.png)
 ![ReadCounty](https://user-images.githubusercontent.com/77464979/158274006-3bb8627b-58f0-492a-a971-b06b1f376c60.png)
 ![UpdateCounty](https://user-images.githubusercontent.com/77464979/158274827-a97295a3-32ac-46ed-b379-a9211b3635a4.png)
@@ -19,7 +19,7 @@ A database intended to store information regarding waste disposal, retention, an
 
 # CRUD for Waste
 
-![WasteOverall](https://user-images.githubusercontent.com/77464979/158472376-2a78e723-2cc8-448c-84fb-eab4b19dce7f.png)
+![WasteOverall](https://user-images.githubusercontent.com/77464979/158472948-09d2079b-50e6-4d71-8280-81e42d3ed26d.png)
 ![CreateWaste](https://user-images.githubusercontent.com/77464979/158275138-f54ca130-c153-4861-80b5-0014eb7914a7.png)
 ![ReadWaste](https://user-images.githubusercontent.com/77464979/158275153-265fe388-27e0-48df-80ba-5a0ce3cca6f6.png)
 ![UpdateWaste](https://user-images.githubusercontent.com/77464979/158275157-8f1df40a-f033-41c0-a9a4-2a13a23eccf8.png)
