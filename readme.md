@@ -47,6 +47,6 @@ A database intended to store information regarding waste disposal, retention, an
 # CRUD for WasteManagement
 ![WasteManagement0](https://user-images.githubusercontent.com/70489283/158485209-411eb40d-62cd-43cd-a095-028e51813834.PNG)
 ![WasteManagement1](https://user-images.githubusercontent.com/70489283/158485211-634acf22-184d-4997-aae5-97b919faa4a5.PNG)
-![WasteManagement2](https://user-images.githubusercontent.com/70489283/158485205-ddd53a7f-54ea-4549-987f-70d680ee3d73.PNG)
-![WasteManagement3](https://user-images.githubusercontent.com/70489283/158485206-7d2b9b68-80a6-4bee-9842-243e28c88bae.PNG)
+![WasteManagement2](https://user-images.githubusercontent.com/70489283/158485527-7154b1c5-e7e6-4be1-8567-4cfb188180c3.PNG)
+![WasteManagement3](https://user-images.githubusercontent.com/70489283/158485530-65378bfa-9ec0-4cf1-87d0-25321616d96f.PNG)
 ![WasteManagement4](https://user-images.githubusercontent.com/70489283/158485207-3c1cd495-b7af-4bff-9906-5bca1e51a32b.PNG)
