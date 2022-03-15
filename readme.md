@@ -28,7 +28,23 @@ A database intended to store information regarding waste disposal, retention, an
 
 
 # CRUD for State
+![State0](https://user-images.githubusercontent.com/70489283/158484132-3118a2f5-c40c-497a-b2ef-5e2c4a874368.PNG)
+![State1](https://user-images.githubusercontent.com/70489283/158484128-7cf938f0-8f44-4d91-a95f-3fdd667f76ec.PNG)
+![State2](https://user-images.githubusercontent.com/70489283/158484129-225d9885-2d1a-4d8f-8e35-9016a326bf21.PNG)
+![State3](https://user-images.githubusercontent.com/70489283/158484130-00b933ba-b884-4df2-bfab-77b877e9ebf6.PNG)
+![State4](https://user-images.githubusercontent.com/70489283/158484131-876b30ca-39c9-4a8c-9319-7cf49d109e01.PNG)
+
 
 # CRUD for WasteFacility
+![WasteFacility0](https://user-images.githubusercontent.com/70489283/158484168-c5e003bd-5033-4f31-9621-0ef914a5bdec.PNG)
+![WasteFacility1](https://user-images.githubusercontent.com/70489283/158484169-6445f8a3-c5b0-4742-9ece-17d036ab3b00.PNG)
+![WasteFacility2](https://user-images.githubusercontent.com/70489283/158484171-b177c181-e178-4659-aa93-3f8792437e19.PNG)
+![WasteFacility3](https://user-images.githubusercontent.com/70489283/158484193-8a6d799c-981c-4f2b-8cce-50f40897f797.PNG)
+![WasteFacility4](https://user-images.githubusercontent.com/70489283/158484198-d3a80347-ad62-4c5c-bbc3-f7de7d52a88d.PNG)
 
 # CRUD for WasteManagement
+![WasteManagement0](https://user-images.githubusercontent.com/70489283/158484212-c9f2ce6b-fda6-46f1-ae6e-b8d9fd95a7e1.PNG)
+![WasteManagement1](https://user-images.githubusercontent.com/70489283/158484215-fd2847dd-bafd-451e-b982-74d8ec585f8d.PNG)
+![WasteManagement2](https://user-images.githubusercontent.com/70489283/158484219-4112b733-cb35-45c9-8831-3bada57de617.PNG)
+![WasteManagement3](https://user-images.githubusercontent.com/70489283/158484243-b92a3a1a-953a-4dab-820f-2670f0e6fd8b.PNG)
+![WasteManagement4](https://user-images.githubusercontent.com/70489283/158484257-ce9d0daf-02a7-4102-8c35-c5a236e7d36b.PNG)
