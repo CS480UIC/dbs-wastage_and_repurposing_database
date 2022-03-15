@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Wastage and Repurposing Database</h1>
+<h1 style="text-align: center;">wastage_and_repurposing_database</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
@@ -56,4 +56,5 @@
 </div>
   </body>
 </html>
+
 
