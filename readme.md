@@ -12,18 +12,20 @@ A database intended to store information regarding waste disposal, retention, an
 # CRUD for County
 
 ![CountyOverall](https://user-images.githubusercontent.com/77464979/158472939-9ef37ce4-3ca7-4213-a02a-8fc911b33071.png)
-![CountyCreate](https://user-images.githubusercontent.com/77464979/158274076-81365ca6-c10e-493c-ba7a-4f08a8cb93df.png)
-![ReadCounty](https://user-images.githubusercontent.com/77464979/158274006-3bb8627b-58f0-492a-a971-b06b1f376c60.png)
-![UpdateCounty](https://user-images.githubusercontent.com/77464979/158274827-a97295a3-32ac-46ed-b379-a9211b3635a4.png)
-![DeleteCounty](https://user-images.githubusercontent.com/77464979/158274393-99cb1254-257c-49a4-b8a5-386cfc63c4d7.png)
+![CountyCreate](https://user-images.githubusercontent.com/77464979/158483390-a6c4d616-cb0e-4dc5-a2df-b3bf29646277.png)
+![ReadCounty](https://user-images.githubusercontent.com/77464979/158483410-f34c3b7f-b08e-476d-8b61-056f22ce9f02.png)
+![UpdateCounty](https://user-images.githubusercontent.com/77464979/158483421-2ab0e553-5c6f-4442-92ef-ba82a5839c73.png)
+![DeleteCounty](https://user-images.githubusercontent.com/77464979/158483430-a44d4413-8849-4735-b58d-39dc7501db64.png)
+
 
 # CRUD for Waste
 
 ![WasteOverall](https://user-images.githubusercontent.com/77464979/158472948-09d2079b-50e6-4d71-8280-81e42d3ed26d.png)
-![CreateWaste](https://user-images.githubusercontent.com/77464979/158275138-f54ca130-c153-4861-80b5-0014eb7914a7.png)
-![ReadWaste](https://user-images.githubusercontent.com/77464979/158275153-265fe388-27e0-48df-80ba-5a0ce3cca6f6.png)
-![UpdateWaste](https://user-images.githubusercontent.com/77464979/158275157-8f1df40a-f033-41c0-a9a4-2a13a23eccf8.png)
-![DeleteWaste](https://user-images.githubusercontent.com/77464979/158275162-64c4b918-9f73-4a43-8a0b-133aeb0f6155.png)
+![CreateWaste](https://user-images.githubusercontent.com/77464979/158483443-5abd432a-d88a-4f47-acc8-eb038c9d504c.png)
+![ReadWaste](https://user-images.githubusercontent.com/77464979/158483472-1622cb12-ac38-47af-b2e4-6bb3eb1805b6.png)
+![UpdateWaste](https://user-images.githubusercontent.com/77464979/158483483-eb808bd4-9e7d-40c7-bb03-97a7ad8fea6f.png)
+![DeleteWaste](https://user-images.githubusercontent.com/77464979/158483495-754031b9-c393-4a6c-ac52-082f2cf0456f.png)
+
 
 # CRUD for State
 
