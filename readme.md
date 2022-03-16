@@ -21,10 +21,11 @@ A database intended to store information regarding waste disposal, retention, an
 # CRUD for Waste
 
 ![WasteOverall](https://user-images.githubusercontent.com/77464979/158483847-1af0f305-88dd-467a-859e-ebc7ce33bab7.png)
-![CreateWaste](https://user-images.githubusercontent.com/77464979/158483443-5abd432a-d88a-4f47-acc8-eb038c9d504c.png)
-![ReadWaste](https://user-images.githubusercontent.com/77464979/158483472-1622cb12-ac38-47af-b2e4-6bb3eb1805b6.png)
-![UpdateWaste](https://user-images.githubusercontent.com/77464979/158483483-eb808bd4-9e7d-40c7-bb03-97a7ad8fea6f.png)
-![DeleteWaste](https://user-images.githubusercontent.com/77464979/158483495-754031b9-c393-4a6c-ac52-082f2cf0456f.png)
+![CreateWaste](https://user-images.githubusercontent.com/77464979/158503484-96dec78d-c540-43e1-a4bc-41c2c4a032cd.png)
+![ReadWaste](https://user-images.githubusercontent.com/77464979/158503493-9873493a-1ef9-4dc6-b23a-b4fd73bac946.png)
+![UpdateWaste](https://user-images.githubusercontent.com/77464979/158503497-6a84e6db-0b39-4a1c-b8eb-d59b5213ae6d.png)
+![DeleteWaste](https://user-images.githubusercontent.com/77464979/158503518-392b65ff-4f5b-40b8-a70f-87435878e1e2.png)
+
 
 
 # CRUD for State
