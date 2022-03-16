@@ -21,11 +21,11 @@
   </head>
   
   <body>
-  <h1>Read Entity1</h1>
+  <h1>Read WasteManagement</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	CountyID    :<input type="text" name="countyid" value="${form.countyid }"/>
+	ID    :<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>

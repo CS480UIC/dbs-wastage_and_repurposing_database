@@ -24,8 +24,8 @@
   <h1>Delete WasteManagement</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete CountyID   :<input type="text" name="countyid" value="${form.countyid }"/>
-	<span style="color: red; font-weight: 900">${errors.countyid }</span>
+	Delete ID   :<input type="text" name="countyid" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
 	<input type="submit" value="Delete WasteManagement"/>
 </form>

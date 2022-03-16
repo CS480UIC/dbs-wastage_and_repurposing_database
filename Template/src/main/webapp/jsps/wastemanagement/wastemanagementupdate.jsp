@@ -21,10 +21,10 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update WasteManagement</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update ID   :<input type="text" name="countyid" value="${form.countyid }"/>
+	Update ID   :<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
 	<input type="submit" value="Update WasteManagement"/>
