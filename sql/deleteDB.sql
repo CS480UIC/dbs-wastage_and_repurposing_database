@@ -3,8 +3,8 @@ use wastage_and_repurposing;
 DELETE FROM waste;
 DROP TABLE waste;
 
-DELETE FROM waste_managment;
-DROP TABLE waste_managment;
+DELETE FROM waste_management;
+DROP TABLE waste_management;
 
 DELETE FROM waste_facility;
 DROP TABLE waste_facility;
