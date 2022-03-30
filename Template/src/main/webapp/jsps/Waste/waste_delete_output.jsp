@@ -43,6 +43,8 @@
 	<br/>
 	Paper	：<input type="text" name="paper" value="${Waste.Paper }" disabled/>
 	<br/>
+	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
+	<br/>
 	<input type="submit" value="Delete Waste"/>
 </form>
 
