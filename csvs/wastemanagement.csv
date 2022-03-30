@@ -1,4 +1,4 @@
-mangementid,facilityid,dayrecorded,totalwaste,organic,plastic,metal,glass,paper
+managementid,facilityid,dayrecorded,totalwaste,organic,plastic,metal,glass,paper
 1,1,2021-01-01,4000,400,2600,156,144,267
 2,2,2021-01-02,6000,2222,1111,219,417,250
 3,3,2021-02-20,600,250,150,50,50,100
