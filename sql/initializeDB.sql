@@ -60,9 +60,9 @@ CREATE TABLE waste (
     FOREIGN KEY(countyid) REFERENCES county(countyid) ON DELETE CASCADE
 );
 
-CREATE TABLE waste_managment 
+CREATE TABLE waste_management 
 (
-  mangementid int primary key NOT NULL,
+  managementid int primary key NOT NULL,
   facilityid int NOT NULL UNIQUE,
   dayrecorded DATE,
   totalwaste int NOT NULL,
