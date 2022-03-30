@@ -42,8 +42,11 @@
 	<br/>
 	Paper	：<input type="text" name="paper" value="${Waste.Paper }" disabled/>
 	<br/>
+	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
+	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>
+
