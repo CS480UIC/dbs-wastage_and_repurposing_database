@@ -42,6 +42,8 @@
 	<br/>
 	Paper	：<input type="text" name="paper" value="${Waste.Paper }" disabled/>
 	<br/>
+	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
+	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/WasteServletUpdate'/>" method="post">
@@ -71,8 +73,12 @@
 	Paper	：<input type="text" name="paper" value="${form.Paper }"/>
 	<span style="color: red; font-weight: 900">${errors.Paper }</span>
 	<br/>
+	dayofsample	：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
+	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
+	<br/>
 	<input type="submit" value="Update Waste"/>
 </form>
 
 </body>
 </html>
+
