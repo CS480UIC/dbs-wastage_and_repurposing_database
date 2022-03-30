@@ -183,14 +183,14 @@ INSERT INTO `waste_facility` VALUES (1,1,'1234 Cool Guy street','Paper',1),(2,2,
 UNLOCK TABLES;
 
 --
--- Table structure for table `waste_managment`
+-- Table structure for table `waste_management`
 --
 
-DROP TABLE IF EXISTS `waste_managment`;
+DROP TABLE IF EXISTS `waste_management`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `waste_managment` (
-  `mangementid` int NOT NULL,
+CREATE TABLE `waste_management` (
+  `managementid` int NOT NULL,
   `facilityid` int NOT NULL,
   `dayrecorded` date DEFAULT NULL,
   `totalwaste` int NOT NULL,
@@ -199,20 +199,20 @@ CREATE TABLE `waste_managment` (
   `plastic` int DEFAULT NULL,
   `paper` int DEFAULT NULL,
   `glass` int DEFAULT NULL,
-  PRIMARY KEY (`mangementid`),
+  PRIMARY KEY (`managementid`),
   UNIQUE KEY `facilityid` (`facilityid`),
-  CONSTRAINT `waste_managment_ibfk_1` FOREIGN KEY (`facilityid`) REFERENCES `waste_facility` (`facilityid`) ON DELETE CASCADE
+  CONSTRAINT `waste_management_ibfk_1` FOREIGN KEY (`facilityid`) REFERENCES `waste_facility` (`facilityid`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `waste_managment`
+-- Dumping data for table `waste_management`
 --
 
-LOCK TABLES `waste_managment` WRITE;
-/*!40000 ALTER TABLE `waste_managment` DISABLE KEYS */;
-INSERT INTO `waste_managment` VALUES (1,1,'2021-01-01',4000,400,156,2600,267,144),(2,2,'2021-01-02',6000,2222,219,1111,250,417),(3,3,'2021-02-20',600,250,50,150,100,50),(4,4,'2021-03-15',900,400,150,200,78,20),(5,5,'2021-07-03',888,400,88,175,100,23);
-/*!40000 ALTER TABLE `waste_managment` ENABLE KEYS */;
+LOCK TABLES `waste_management` WRITE;
+/*!40000 ALTER TABLE `waste_management` DISABLE KEYS */;
+INSERT INTO `waste_management` VALUES (1,1,'2021-01-01',4000,400,156,2600,267,144),(2,2,'2021-01-02',6000,2222,219,1111,250,417),(3,3,'2021-02-20',600,250,50,150,100,50),(4,4,'2021-03-15',900,400,150,200,78,20),(5,5,'2021-07-03',888,400,88,175,100,23);
+/*!40000 ALTER TABLE `waste_management` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -224,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-29 21:42:17
+-- Dump completed on 2022-03-30  0:15:05
