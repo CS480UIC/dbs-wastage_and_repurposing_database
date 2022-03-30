@@ -49,6 +49,9 @@
 	paper	：<input type="text" name="paper" value="${form.paper }"/>
 	<span style="color: red; font-weight: 900">${errors.paper }</span>
 	<br/>
+	dayofsample	：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
+	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
+	<br/>
 	<input type="submit" value="Waste Create"/>
 </form>
   </body>
