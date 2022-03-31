@@ -8,4 +8,4 @@ VIEW `7.3.1` AS
         `waste`.`totalwaste` AS `totalwaste`
     FROM
         (`county`
-        JOIN `waste`)
+        LEFT JOIN `waste` ON ((`county`.`countyid` = `waste`.`countyid`)))
