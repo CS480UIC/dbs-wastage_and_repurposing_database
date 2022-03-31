@@ -4,8 +4,8 @@ CREATE
     SQL SECURITY DEFINER
 VIEW `7.2.3` AS
     SELECT 
-        DAYOFMONTH(`waste_management`.`dayrecorded`) AS `DAY(dayrecorded)`
+        `waste`.`countyid` AS `countyid`,
+        SUM(`waste`.`totalwaste`) AS `sum(totalwaste)`
     FROM
-        `waste_management`
-    WHERE
-        (`waste_management`.`facilityid` <> 3)
+        `waste`
+    GROUP BY `waste`.`countyid`
