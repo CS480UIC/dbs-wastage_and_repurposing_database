@@ -1,4 +1,4 @@
-use wastage_and_repurposing;
+use wastage_and_repurposing_database;
 
 DELETE FROM waste;
 DROP TABLE waste;
