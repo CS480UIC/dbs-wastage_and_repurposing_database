@@ -28,7 +28,7 @@ CREATE TABLE `county` (
   `countyname` varchar(20) DEFAULT NULL,
   `population` int NOT NULL,
   PRIMARY KEY (`countyid`),
-  UNIQUE KEY `countyid` (`countyid`),
+  UNIQUE KEY `countyname` (`countyname`),
   KEY `stateid` (`stateid`),
   CONSTRAINT `county_ibfk_1` FOREIGN KEY (`stateid`) REFERENCES `state` (`stateid`) ON DELETE CASCADE,
   CONSTRAINT `chk_population` CHECK ((`population` >= 0))
@@ -137,7 +137,7 @@ CREATE TABLE `waste` (
   `glass` int DEFAULT NULL,
   `paper` int DEFAULT NULL,
   PRIMARY KEY (`wasteid`),
-  UNIQUE KEY `countyid` (`countyid`),
+  KEY `countyid` (`countyid`),
   CONSTRAINT `waste_ibfk_1` FOREIGN KEY (`countyid`) REFERENCES `county` (`countyid`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -192,15 +192,15 @@ DROP TABLE IF EXISTS `waste_management`;
 CREATE TABLE `waste_management` (
   `managementid` int NOT NULL,
   `facilityid` int NOT NULL,
-  `dayrecorded` date DEFAULT NULL,
   `totalwaste` int NOT NULL,
+  `dayofsample` date DEFAULT NULL,
   `organic` int DEFAULT NULL,
   `metal` int DEFAULT NULL,
   `plastic` int DEFAULT NULL,
   `paper` int DEFAULT NULL,
   `glass` int DEFAULT NULL,
   PRIMARY KEY (`managementid`),
-  UNIQUE KEY `facilityid` (`facilityid`),
+  KEY `facilityid` (`facilityid`),
   CONSTRAINT `waste_management_ibfk_1` FOREIGN KEY (`facilityid`) REFERENCES `waste_facility` (`facilityid`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -211,7 +211,7 @@ CREATE TABLE `waste_management` (
 
 LOCK TABLES `waste_management` WRITE;
 /*!40000 ALTER TABLE `waste_management` DISABLE KEYS */;
-INSERT INTO `waste_management` VALUES (1,1,'2021-01-01',4000,400,156,2600,267,144),(2,2,'2021-01-02',6000,2222,219,1111,250,417),(3,3,'2021-02-20',600,250,50,150,100,50),(4,4,'2021-03-15',900,400,150,200,78,20),(5,5,'2021-07-03',888,400,88,175,100,23);
+INSERT INTO `waste_management` VALUES (1,1,4000,'2021-01-01',400,156,2600,267,144),(2,2,6000,'2021-01-02',2222,219,1111,250,417),(3,3,600,'2021-02-20',250,50,150,100,50),(4,4,900,'2021-03-15',400,150,200,78,20),(5,5,888,'2021-07-03',400,88,175,100,23);
 /*!40000 ALTER TABLE `waste_management` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -224,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-30  0:15:05
+-- Dump completed on 2022-03-31 17:42:41
