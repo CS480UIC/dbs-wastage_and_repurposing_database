@@ -9,3 +9,4 @@ VIEW `7.1.2` AS
         `waste_facility`
     WHERE
         (`waste_facility`.`facilityid` <> 3)
+    ORDER BY `waste_facility`.`address`
