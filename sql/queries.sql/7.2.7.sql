@@ -2,10 +2,10 @@ CREATE
     ALGORITHM = UNDEFINED 
     DEFINER = `root`@`localhost` 
     SQL SECURITY DEFINER
-VIEW `7.2.7` AS
+VIEW `wastage_and_repurposing_database`.`7.2.7` AS
     SELECT 
-        CONCAT('Chill', `state`.`statename`) AS `CONCAT('Chill',statename)`
+        DAYOFMONTH(`wastage_and_repurposing_database`.`waste_management`.`dayofsample`) AS `DAY(dayofsample)`
     FROM
-        `state`
+        `wastage_and_repurposing_database`.`waste_management`
     WHERE
-        (`state`.`stateid` = 1)
+        (`wastage_and_repurposing_database`.`waste_management`.`facilityid` <> 3)
