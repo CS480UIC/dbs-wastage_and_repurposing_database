@@ -1,21 +1,20 @@
-CREATE DATABASE bookstore;
+CREATE DATABASE wastage_and_repurposing_database;
 
 
-use  bookstore;
+use  wastage_and_repurposing_database;
 
-CREATE TABLE user
+CREATE TABLE user2
 (
-  
+
   username VARCHAR(50) primary key,
-  `password` VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL
 );
 
-
-CREATE TABLE entity1 
+CREATE TABLE entity2 
 (
-  
+
   username VARCHAR(50) primary key,
-  `password` VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL
 );
