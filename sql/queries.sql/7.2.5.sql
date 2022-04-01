@@ -2,10 +2,11 @@ CREATE
     ALGORITHM = UNDEFINED 
     DEFINER = `root`@`localhost` 
     SQL SECURITY DEFINER
-VIEW `7.2.5` AS
+VIEW `wastage_and_repurposing_database`.`7.2.6` AS
     SELECT 
-        AVG(`waste`.`plastic`) AS `plasticAVG`,
-        `waste`.`totalwaste` AS `totalwaste`
+        CONCAT('Chill',
+                `wastage_and_repurposing_database`.`state`.`statename`) AS `CONCAT('Chill',statename)`
     FROM
-        `waste`
-    GROUP BY `waste`.`totalwaste`
+        `wastage_and_repurposing_database`.`state`
+    WHERE
+        (`wastage_and_repurposing_database`.`state`.`stateid` = 1)
