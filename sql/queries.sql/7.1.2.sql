@@ -2,11 +2,11 @@ CREATE
     ALGORITHM = UNDEFINED 
     DEFINER = `root`@`localhost` 
     SQL SECURITY DEFINER
-VIEW `7.1.2` AS
+VIEW `wastage_and_repurposing_database`.`7.1.2` AS
     SELECT 
-        `waste_facility`.`address` AS `address`
+        `wastage_and_repurposing_database`.`waste_facility`.`address` AS `address`
     FROM
-        `waste_facility`
+        `wastage_and_repurposing_database`.`waste_facility`
     WHERE
-        (`waste_facility`.`facilityid` <> 3)
-    ORDER BY `waste_facility`.`address`
+        (`wastage_and_repurposing_database`.`waste_facility`.`facilityid` <> 3)
+    ORDER BY `wastage_and_repurposing_database`.`waste_facility`.`address`
