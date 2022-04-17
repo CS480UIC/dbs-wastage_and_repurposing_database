@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>CS480 Demo</display-name>
     <servlet>
     <description></description>
@@ -49,6 +49,147 @@
     <url-pattern>/Entity1ServletDelete</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>StateServletCreate</display-name>
+    <servlet-name>StateServletCreate</servlet-name>
+    <servlet-class>state.web.servlet.StateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletCreate</servlet-name>
+    <url-pattern>/StateServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>StateServletRead</display-name>
+    <servlet-name>StateServletRead</servlet-name>
+    <servlet-class>state.web.servlet.StateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletRead</servlet-name>
+    <url-pattern>/StateServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>StateServletUpdate</display-name>
+    <servlet-name>StateServletUpdate</servlet-name>
+    <servlet-class>state.web.servlet.StateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletUpdate</servlet-name>
+    <url-pattern>/StateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>StateServletDelete</display-name>
+    <servlet-name>StateServletDelete</servlet-name>
+    <servlet-class>state.web.servlet.StateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletDelete</servlet-name>
+    <url-pattern>/StateServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WasteFacilityServletCreate</display-name>
+    <servlet-name>WasteFacilityServletCreate</servlet-name>
+    <servlet-class>wastefacility.web.servlet.WasteFacilityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteFacilityServletCreate</servlet-name>
+    <url-pattern>/WasteFacilityServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WasteFacilityServletRead</display-name>
+    <servlet-name>WasteFacilityServletRead</servlet-name>
+    <servlet-class>wastefacility.web.servlet.WasteFacilityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteFacilityServletRead</servlet-name>
+    <url-pattern>/WasteFacilityServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>WasteFacilityServletUpdate</display-name>
+    <servlet-name>WasteFacilityServletUpdate</servlet-name>
+    <servlet-class>wastefacility.web.servlet.WasteFacilityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteFacilityServletUpdate</servlet-name>
+    <url-pattern>/WasteFacilityServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>WasteFacilityServletDelete</display-name>
+    <servlet-name>WasteFacilityServletDelete</servlet-name>
+    <servlet-class>wastefacility.web.servlet.WasteFacilityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteFacilityServletDelete</servlet-name>
+    <url-pattern>/WasteFacilityServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WasteManagementServletCreate</display-name>
+    <servlet-name>WasteManagementServletCreate</servlet-name>
+    <servlet-class>wastemanagement.web.servlet.WasteManagementServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteManagementServletCreate</servlet-name>
+    <url-pattern>/WasteManagementServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WasteManagementServletRead</display-name>
+    <servlet-name>WasteManagementServletRead</servlet-name>
+    <servlet-class>wastemanagement.web.servlet.WasteManagementServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteManagementServletRead</servlet-name>
+    <url-pattern>/WasteManagementServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>WasteManagementServletUpdate</display-name>
+    <servlet-name>WasteManagementServletUpdate</servlet-name>
+    <servlet-class>wastemanagement.web.servlet.WasteManagementServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteManagementServletUpdate</servlet-name>
+    <url-pattern>/WasteManagementServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>WasteManagementServletDelete</display-name>
+    <servlet-name>WasteManagementServletDelete</servlet-name>
+    <servlet-class>wastemanagement.web.servlet.WasteManagementServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteManagementServletDelete</servlet-name>
+    <url-pattern>/WasteManagementServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>
@@ -59,6 +200,21 @@
     <servlet-name>UserServletRegister</servlet-name>
     <url-pattern>/UserServletRegister</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>InitializeDB</display-name>
+    <servlet-name>InitializeDB</servlet-name>
+    <servlet-class>init.web.servlet.InitializeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitializeDB</servlet-name>
+    <url-pattern>/InitializeDB</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>UserServletLogin</display-name>
