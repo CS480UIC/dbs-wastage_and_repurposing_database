@@ -1,18 +1,18 @@
-package user.service;
+package wastefacility.service;
 
-public class UserException extends Exception {
+public class WasteFacilityException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public UserException() {
+	public WasteFacilityException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserException(String message) {
+	public WasteFacilityException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

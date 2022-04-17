@@ -1,18 +1,18 @@
-package user.service;
+package state.service;
 
-public class UserException extends Exception {
+public class StateException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public UserException() {
+	public StateException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserException(String message) {
+	public StateException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

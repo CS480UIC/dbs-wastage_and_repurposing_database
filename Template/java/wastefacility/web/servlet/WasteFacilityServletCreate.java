@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package wastefacility.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.Entity1;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import wastefacility.domain.WasteFacility;
+import wastefacility.service.WasteFacilityException;
+import wastefacility.service.WasteFacilityService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class WasteFacilityServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public WasteFacilityServletCreate() {
         super();
         // TODO Auto-generated constructor stub
         
@@ -43,11 +43,12 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		WasteFacilityService stateservice = new WasteFacilityService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		WasteFacility form = new WasteFacility();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
+		
 		for(String name : paramMap.keySet()) {
 			
 			String[] values = paramMap.get(name);
@@ -56,25 +57,31 @@ public class Entity1ServletCreate extends HttpServlet {
 			System.out.println(info.add(values[0]));
 
 		}
-//		System.out.println("1");
-//		System.out.println(info);
+		System.out.println("1");
+		System.out.println(info);
 
-		form.setUsername(info.get(1));
+		form.setFacilityid(Integer.parseInt(info.get(1)));
 //		System.out.println("1");
-
-		form.setPassword(info.get(2));
+//		System.out.println(info.get(1));
+		form.setCountyid(Integer.parseInt(info.get(3)));
+		
+		
+		form.setAddress(info.get(5));
 //		System.out.println("2");
-
-		form.setEmail(info.get(3));		
+//		System.out.println(info.get(2));
+		
+		
+		form.setRecycleordump(Integer.parseInt(info.get(7)));		
 //		System.out.println("3");
+//		System.out.println(info.get(3));
 		
 		
 		try {
 			System.out.println("3");
-			entity1service.create(form);
+			stateservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | WasteFacilityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

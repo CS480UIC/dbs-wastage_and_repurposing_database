@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package wastemanagement.web.servlet;
 
 import java.io.IOException;
 //import java.util.ArrayList;
@@ -14,21 +14,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import wastemanagement.dao.WasteManagementDao;
+import wastemanagement.domain.WasteManagement;
 //import entity1.service.Entity1Exception;
 //import entity1.service.Entity1Service;
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletDelete extends HttpServlet {
+public class WasteManagementServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletDelete() {
+    public WasteManagementServletDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,13 +45,13 @@ public class Entity1ServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		WasteManagementDao wastemanagementdao = new WasteManagementDao();
+		WasteManagement wastemanagement = null;
 		if(method.equals("search"))
 		{
 			try {
-//				entity1dao to Entity1Dao
-				entity1 = Entity1Dao.findByUsername(request.getParameter("username"));
+				System.out.println(request.getParameter("managementid"));
+				wastemanagement = WasteManagementDao.findByManagementid(Integer.parseInt(request.getParameter("managementid")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -61,21 +61,21 @@ public class Entity1ServletDelete extends HttpServlet {
 			}
 		
 //			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
+			if(wastemanagement.getManagementid()>0){
+						System.out.println(wastemanagement);
+						request.setAttribute("wastemanagement", wastemanagement);
+						request.getRequestDispatcher("/jsps/wastemanagement/wastemanagement_delete_output.jsp").forward(request, response);
 					
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/wastemanagement/wastemanagement_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1dao.delete(request.getParameter("username"));
+				wastemanagementdao.delete(Integer.parseInt(request.getParameter("managementid")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -84,7 +84,7 @@ public class Entity1ServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/wastemanagement/wastemanagement_read_output.jsp").forward(request, response);
 		}
 	}
 }

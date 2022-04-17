@@ -1,34 +1,31 @@
-package entity1.web.servlet;
+package state.web.servlet;
 
 import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.Arrays;
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
-//import javax.jws.WebService;
 import javax.servlet.ServletException;
-//import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
-//import entity1.service.Entity1Exception;
+import state.dao.StateDao;
+import state.domain.State;
 //import entity1.service.Entity1Service;
+
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletDelete extends HttpServlet {
+public class StateServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletDelete() {
+    public StateServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,14 +41,15 @@ public class Entity1ServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		StateDao statedao = new StateDao();
+		State state = null;
+		
 		if(method.equals("search"))
 		{
 			try {
-//				entity1dao to Entity1Dao
-				entity1 = Entity1Dao.findByUsername(request.getParameter("username"));
+				state = StateDao.findByStateid(Integer.parseInt(request.getParameter("stateid")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -61,21 +59,39 @@ public class Entity1ServletDelete extends HttpServlet {
 			}
 		
 //			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
+			if(state.getStateid()>0){
+				System.out.println("11");
+
+						System.out.println(state);
+						request.setAttribute("state", state);
+						request.getRequestDispatcher("/jsps/state/state_update_output.jsp").forward(request, response);
 					
 				}
 				else{
+					
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("delete"))
-		{	
+		else if(method.equals("update"))
+		{
+			Map<String,String[]> paramMap = request.getParameterMap();
+			State form = new State();
+			List<String> info = new ArrayList<String>();
+
+			for(String name : paramMap.keySet()) {
+				
+				String[] values = paramMap.get(name);
+				info.add(values[0]);
+				System.out.println(name + ": " + Arrays.toString(values));
+			}
+			form.setStatename(info.get(2));
+			form.setNumberofcounties(Integer.parseInt(info.get(3)));
+			form.setStateid(Integer.parseInt(request.getParameter("stateid")));
+
 			try {
-				entity1dao.delete(request.getParameter("username"));
+				statedao.update(form);
+
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -83,8 +99,8 @@ public class Entity1ServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Entity Updated");
+			request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 		}
 	}
 }

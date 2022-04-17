@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package wastefacility.web.servlet;
 
 import java.io.IOException;
 
@@ -8,22 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
-//import entity1.service.Entity1Service;
+import wastefacility.dao.WasteFacilityDao;
+import wastefacility.domain.WasteFacility;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class WasteFacilityServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public WasteFacilityServletRead() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,9 +38,10 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
+		WasteFacility wastefacility = null;
 		try {
-			entity1 = Entity1Dao.findByUsername(request.getParameter("username"));
+			wastefacility = WasteFacilityDao.findByFacilityid(Integer.parseInt(request.getParameter("facilityid")));
+			System.out.println(Integer.parseInt(request.getParameter("facilityid")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,15 +50,15 @@ public class Entity1ServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(wastefacility.getFacilityid() > 0){
+					System.out.println(wastefacility);
+					request.setAttribute("wastefacility", wastefacility);
+					request.getRequestDispatcher("/jsps/wastefacility/wastefacility_read_output.jsp").forward(request, response);
 				
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/wastefacility/wastefacility_read_output.jsp").forward(request, response);
 		}
 	}
 }
