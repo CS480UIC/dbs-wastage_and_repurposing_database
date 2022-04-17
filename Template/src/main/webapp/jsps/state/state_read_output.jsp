@@ -24,7 +24,7 @@
   <h1>Read State Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ID    :<input type="text" name="id" value="${state.id }" disabled/>
+	ID    :<input type="text" name="stateid" value="${state.stateid }" disabled/>
 	<br/>
 	StateName    ：<input type="text" name="statename" value="${state.statename }" disabled/>
 	<br/>

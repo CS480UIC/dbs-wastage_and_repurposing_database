@@ -37,14 +37,13 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
-			<a href="<c:url value='/jsps/initialize/init.jsp'/>" target="body">Initialize Database</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/initialize/init.jsp'/>" target="_parent">Initialize Database</a> |&nbsp;&nbsp;
 			
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/waste/menu.jsp'/>" target="body">CRUD Waste</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/county/menu.jsp'/>" target="body">CRUD County</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/state/menu.jsp'/>" target="body">CRUD State</a> |&nbsp;&nbsp;

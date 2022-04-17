@@ -22,22 +22,20 @@
   
   <body>
   <h1>Create WasteFacility</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ID    :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
-	<br/>
-	Address    ：<input type="text" name="address" value="${form.address }"/>
-	<span style="color: red; font-weight: 900">${errors.address }</span>
-	<br/>
-	WasteTypeProcessed    ：<input type="text" name="wastetypeprocessed" value="${form.wastetypeprocessed }"/>
-	<span style="color: red; font-weight: 900">${errors.wastetypeprocessed }</span>
-	<br/>
-	RecycleOrDump    ：<input type="text" name="recycleordump" value="${form.recycleordump }"/>
-	<span style="color: red; font-weight: 900">${errors.recycleordump }</span>
+<form action="<c:url value='/WasteFacilityServletCreate'/>" method="post">
+	ID    :<input type="text" name="facilityid" value="${form.facilityid }"/>
+	<span style="color: red; font-weight: 900">${errors.facilityid }</span>
 	<br/>
 	CountyID    ：<input type="text" name="countyid" value="${form.countyid }"/>
 	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
+	Address    ：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
+	<br/>
+	RecycleOrDump    ：<input type="text" name="recycleordump" value="${form.recycleordump }"/>
+	<span style="color: red; font-weight: 900">${errors.recycleordump }</span>
+	<br/>
+	
 	<input type="submit" value="Create WasteFacility"/>
 </form>
   </body>

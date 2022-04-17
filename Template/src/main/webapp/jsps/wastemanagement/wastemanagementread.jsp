@@ -23,10 +23,10 @@
   <body>
   <h1>Read WasteManagement</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/WasteManagementServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	ID    :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.countyid }</span>
+	ID    :<input type="text" name="managementid" value="${form.managementid }"/>
+	<span style="color: red; font-weight: 900">${errors.managementid }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -34,7 +34,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Entity1"/>
+	<input type="submit" value="Read WasteManagement"/>
 </form>
   </body>
 </html>

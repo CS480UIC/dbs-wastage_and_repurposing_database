@@ -24,7 +24,7 @@
   <h1>Update State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ID    :<input type="text" name="id1" value="${state.id }" disabled/>
+	ID    :<input type="text" name="stateid" value="${state.stateid }" disabled/>
 	<br/>
 	StateName    ：<input type="text" name="statename1" value="${state.statename }" disabled />
 	<br/>
@@ -32,10 +32,10 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/StateServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="id" value="${state.id }"/>
-	StateName    ：<input type="password" name="statename" value="${form.statename }"/>
+				<input type="hidden" name="stateid" value="${state.stateid }"/>
+	StateName    ：<input type="text" name="statename" value="${form.statename }"/>
 	<span style="color: red; font-weight: 900">${errors.statename }</span>
 	<br/>
 	NumberOfCounties    ：<input type="text" name="numberofcounties" value="${form.numberofcounties }"/>

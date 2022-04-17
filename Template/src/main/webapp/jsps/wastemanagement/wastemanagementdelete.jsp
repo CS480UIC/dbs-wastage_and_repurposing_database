@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete WasteManagement</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/WasteManagementServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete ID   :<input type="text" name="countyid" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	Delete ID   :<input type="text" name="managementid" value="${form.managementid }"/>
+	<span style="color: red; font-weight: 900">${errors.managementid }</span>
 	<br/>
 	<input type="submit" value="Delete WasteManagement"/>
 </form>

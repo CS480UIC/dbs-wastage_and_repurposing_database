@@ -22,15 +22,18 @@
   
   <body>
   <h1>Create WasteManagement </h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ID    :<input type="text" name="id" value="${form.id }"/>
+<form action="<c:url value='/WasteManagementServletCreate'/>" method="post">
+	ID    :<input type="text" name="managementid" value="${form.managementid }"/>
 	<span style="color: red; font-weight: 900">${errors.totalwaste }</span>
+	<br/>
+	FacilityID：<input type="text" name="facilityid" value="${form.facilityid }"/>
+	<span style="color: red; font-weight: 900">${errors.facilityid }</span>
 	<br/>
 	TotalWaste    :<input type="text" name="totalwaste" value="${form.totalwaste }"/>
 	<span style="color: red; font-weight: 900">${errors.totalwaste }</span>
 	<br/>
-	CountyID：<input type="password" name="countyid" value="${form.countyid }"/>
-	<span style="color: red; font-weight: 900">${errors.countyid }</span>
+	Day Of Sample    :<input type="text" name="dayofsample" value="${form.dayofsample }"/>
+	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
 	<br/>
 	Organic	：<input type="text" name="organic" value="${form.organic }"/>
 	<span style="color: red; font-weight: 900">${errors.organic }</span>

@@ -24,16 +24,15 @@
   <h1>Read WasteFacility Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ID    :<input type="text" name="id" value="${wastefacility.id }" disabled/>
-	<br/>
-	Address    ：<input type="text" name="address" value="${wastefacility.address }" disabled/>
-	<br/>
-	WasteTypeProcessed    ：<input type="text" name="wastetypeprocessed" value="${wastefacility.wastetypeprocessed }" disabled/>
-	<br/>
-	RecycleOrDump    ：<input type="text" name="recycleordump" value="${wastefacility.recycleordump }" disabled/>
+	ID    :<input type="text" name="facilityid" value="${wastefacility.facilityid }" disabled/>
 	<br/>
 	CountyID    ：<input type="text" name="countyid" value="${wastefacility.countyid }" disabled/>
 	<br/>
+	Address    ：<input type="text" name="address" value="${wastefacility.address }" disabled/>
+	<br/>
+	RecycleOrDump    ：<input type="text" name="recycleordump" value="${wastefacility.recycleordump }" disabled/>
+	<br/>
+	
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

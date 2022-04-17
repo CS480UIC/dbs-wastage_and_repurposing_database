@@ -24,33 +24,30 @@
   <h1>Update WasteFacility</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ID    :<input type="text" name="id1" value="${wastefacility.id }" disabled/>
-	<br/>
-	Address    ：<input type="text" name="address1" value="${wastefacility.address }" disabled />
-	<br/>
-	WasteTypeProcessed    ：<input type="text" name="wastetypeprocessed1" value="${wastefacility.wastetypeprocessed }" disabled/>
-	<br/>
-	RecycleOrDump    ：<input type="text" name="recycleordump1" value="${wastefacility.recycleordump }" disabled/>
+	ID    :<input type="text" name="facilityid1" value="${wastefacility.facilityid }" disabled/>
 	<br/>
 	CountyID    ：<input type="text" name="countyid1" value="${wastefacility.countyid }" disabled/>
 	<br/>
+	Address    ：<input type="text" name="address1" value="${wastefacility.address }" disabled />
+	<br/>
+	RecycleOrDump    ：<input type="text" name="recycleordump1" value="${wastefacility.recycleordump }" disabled/>
+	<br/>
+	
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/WasteFacilityServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="id" value="${wastefacility.id }"/>
-	Address    ：<input type="password" name="address" value="${form.address }"/>
-	<span style="color: red; font-weight: 900">${errors.address }</span>
+				<input type="hidden" name="facilityid" value="${wastefacility.facilityid }"/>
+	CountyID    ：<input type="text" name="countyid" value="${form.countyid }"/>
+	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
-	WasteTypeProcessed    ：<input type="text" name="wastetypeprocessed" value="${form.wastetypeprocessed }"/>
-	<span style="color: red; font-weight: 900">${errors.wastetypeprocessed }</span>
+	Address    ：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
 	<br/>
 	RecycleOrDump    ：<input type="text" name="recycleordump" value="${form.recycleordump }"/>
 	<span style="color: red; font-weight: 900">${errors.recycleordump }</span>
 	<br/>
-	CountyID    ：<input type="text" name="countyid" value="${form.countyid }"/>
-	<span style="color: red; font-weight: 900">${errors.countyid }</span>
-	<br/>
+	
 	<input type="submit" value="Update WasteFacility"/>
 </form>
 

@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update State</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/StateServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update ID   :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	Update ID   :<input type="text" name="stateid" value="${form.stateid }"/>
+	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
 	<input type="submit" value="Update State"/>
 </form>

@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete State</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/StateServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete ID   :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	Delete ID   :<input type="test" name="stateid" value="${form.stateid }"/>
+	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
 	<input type="submit" value="Delete State"/>
 </form>

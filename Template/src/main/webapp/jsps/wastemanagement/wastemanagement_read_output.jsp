@@ -24,9 +24,13 @@
   <h1>Read WasteManagement Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	ID：<input type="text" name="managementid" value="${wastemanagement.managementid }" disabled/>
+	<br/>
+	FacilityID：<input type="text" name="facilityid" value="${wastemanagement.facilityid }" disabled/>
+	<br/>
 	TotalWaste    :<input type="text" name="totalwaste" value="${wastemanagement.totalwaste }" disabled/>
 	<br/>
-	CountyID：<input type="text" name="countyid" value="${wastemanagement.countyid }" disabled/>
+	Day Of Sample    :<input type="text" name="dayofsample" value="${wastemanagement.dayofsample }" disabled/>
 	<br/>
 	Organic	：<input type="text" name="organic" value="${wastemanagement.organic }" disabled/>
 	<br/>

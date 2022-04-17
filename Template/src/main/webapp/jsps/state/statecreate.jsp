@@ -22,9 +22,9 @@
   
   <body>
   <h1>Create State</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ID    :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+<form action="<c:url value='/StateServletCreate'/>" method="post">
+	ID    :<input type="text" name="stateid" value="${form.stateid }"/>
+	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
 	StateName    ：<input type="text" name="statename" value="${form.statename }"/>
 	<span style="color: red; font-weight: 900">${errors.statename }</span>

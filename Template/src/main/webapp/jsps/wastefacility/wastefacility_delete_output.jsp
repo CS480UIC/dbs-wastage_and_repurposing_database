@@ -23,19 +23,18 @@
   <body>
   <h1>Delete WasteFacility</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/WasteFacilityServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${wastefacility.id }"/>
-	ID    :<input type="text" name="id" value="${wastefacility.id }" disabled/>
-	<br/>
-	Address    ：<input type="text" name="address" value="${wastefacility.address }" disabled/>
-	<br/>
-	WasteTypeProcessed    ：<input type="text" name="wastetypeprocessed" value="${wastefacility.wastetypeprocessed }" disabled/>
-	<br/>
-	RecycleOrDump    ：<input type="text" name="recycleordump" value="${wastefacility.recycleordump }" disabled/>
+		<input type="hidden" name="facilityid" value="${wastefacility.facilityid }"/>
+	ID    :<input type="text" name="facilityid" value="${wastefacility.facilityid }" disabled/>
 	<br/>
 	CountyID    ：<input type="text" name="countyid" value="${wastefacility.countyid }" disabled/>
 	<br/>
+	Address    ：<input type="text" name="address" value="${wastefacility.address }" disabled/>
+	<br/>
+	RecycleOrDump    ：<input type="text" name="recycleordump" value="${wastefacility.recycleordump }" disabled/>
+	<br/>
+	
 	<input type="submit" value="Delete WasteFacility"/>
 </form>
 

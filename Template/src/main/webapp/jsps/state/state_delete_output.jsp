@@ -23,10 +23,10 @@
   <body>
   <h1>Delete State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/StateServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${state.id }"/>
-	ID    :<input type="text" name="id" value="${state.id }" disabled/>
+		<input type="hidden" name="stateid" value="${state.stateid }"/>
+	ID    :<input type="text" name="stateid" value="${state.stateid }" disabled/>
 	<br/>
 	
 	StateName    ：<input type="text" name="statename" value="${state.statename }" disabled/>
