@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Waste</h1>
     <br>
-	<a href="<c:url value='/jsps/Waste/Wastecreate.jsp'/>" target="_parent">Create Waste</a> |&nbsp; 
-	<a href="<c:url value='/jsps/Waste/Wasteread.jsp'/>" target="_parent">Read Waste</a> |&nbsp;
-	<a href="<c:url value='/jsps/Waste/Wasteupdate.jsp'/>" target="_parent">Update Waste</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/Waste/Wastedelete.jsp'/>" target="_parent">Delete Waste</a>	
+	<a href="<c:url value='/jsps/waste/wastecreate.jsp'/>" target="_parent">Create Waste</a> |&nbsp; 
+	<a href="<c:url value='/jsps/waste/wasteread.jsp'/>" target="_parent">Read Waste</a> |&nbsp;
+	<a href="<c:url value='/jsps/waste/wasteupdate.jsp'/>" target="_parent">Update Waste</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/waste/wastedelete.jsp'/>" target="_parent">Delete Waste</a>	
 	    
   </body>
 </html>
