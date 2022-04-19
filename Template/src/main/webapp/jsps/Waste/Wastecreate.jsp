@@ -23,16 +23,17 @@
   <body>
   <h1>Waste Create</h1>
 <form action="<c:url value='/WasteServletCreate'/>" method="post">
-
-	id：<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	wasteid：<input type="text" name="wasteid" value="${form.wasteid }"/>
+	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
 	<br/>
-	
+	countyid：<input type="text" name="countyid" value="${form.countyid }"/>
+	<span style="color: red; font-weight: 900">${errors.countyid }</span>
+	<br/>
 	totalwaste：<input type="text" name="totalwaste" value="${form.totalwaste }"/>
 	<span style="color: red; font-weight: 900">${errors.totalwaste }</span>
 	<br/>
-	countyID	：<input type="text" name="countyid" value="${form.countyID }"/>
-	<span style="color: red; font-weight: 900">${errors.countyID }</span>
+	dayofsample：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
+	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
 	<br/>
 	organic	：<input type="text" name="organic" value="${form.organic }"/>
 	<span style="color: red; font-weight: 900">${errors.organic }</span>
@@ -48,9 +49,6 @@
 	<br/>
 	paper	：<input type="text" name="paper" value="${form.paper }"/>
 	<span style="color: red; font-weight: 900">${errors.paper }</span>
-	<br/>
-	dayofsample	：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
-	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
 	<br/>
 	<input type="submit" value="Waste Create"/>
 </form>
