@@ -1,0 +1,38 @@
+package county.service;
+
+
+import county.dao.CountyDao;
+import county.domain.County;
+
+/**
+ * logic functions such as register, login
+ * @author Aayush Makharia
+ *
+ */
+public class CountyService {
+	private CountyDao entity1Dao = new CountyDao();
+	
+	/**
+	 * register a Entity1
+	 * @param form
+	 * @throws ClassNotFoundException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 */
+	public void create(County form) throws CountyException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+		
+		// check the primary key of Entity1
+		County entity1 = CountyDao.findBycountyid(form.getCountyid());
+		if(entity1.getCountyid()!=null && entity1.getCountyid() == form.getCountyid()) throw new CountyException("This user name has been registered!");
+		entity1Dao.add(form);
+	}
+	/**
+	 * Login function
+	 * @param form
+	 * @return
+	 * @throws UserException 
+	 * @throws ClassNotFoundException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 */
+}
