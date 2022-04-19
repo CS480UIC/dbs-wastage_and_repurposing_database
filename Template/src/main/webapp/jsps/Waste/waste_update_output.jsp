@@ -24,61 +24,57 @@
   <h1>Update Waste</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-
-	id    :<input type="text" name="id" value="${Waste.id }" disabled/>
+	wasteid    :<input type="text" name="wasteid" value="${Waste.wasteid }" disabled/>
+	<br/>	
+	countyid：<input type="text" name="countyid" value="${Waste.countyid }" disabled/>
 	<br/>
-	Totalwaste    :<input type="text" name="totalwaste" value="${Waste.Totalwaste }" disabled/>
-	<br/>
-	
-	CountyID：<input type="text" name="countyid" value="${Waste.CountyID }" disabled/>
-	<br/>
-	Organic	：<input type="text" name="organic" value="${Waste.Organic }" disabled/>
-	<br/>
-    Plastic	：<input type="text" name="plastic" value="${Waste.Plastic }" disabled/>
-	<br/>
-	Metal	：<input type="text" name="metal" value="${Waste.Metal }" disabled/>
-	<br/>
-	Glass	：<input type="text" name="glass" value="${Waste.Glass }" disabled/>
-	<br/>
-	Paper	：<input type="text" name="paper" value="${Waste.Paper }" disabled/>
+	totalwaste    :<input type="text" name="totalwaste" value="${Waste.totalwaste }" disabled/>
 	<br/>
 	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
+	<br/>
+	organic	：<input type="text" name="organic" value="${Waste.organic }" disabled/>
+	<br/>
+    plastic	：<input type="text" name="plastic" value="${Waste.plastic }" disabled/>
+	<br/>
+	metal	：<input type="text" name="metal" value="${Waste.metal }" disabled/>
+	<br/>
+	glass	：<input type="text" name="glass" value="${Waste.glass }" disabled/>
+	<br/>
+	paper	：<input type="text" name="paper" value="${Waste.paper }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/WasteServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="Totalwaste" value="${Waste.id }"/>
-	id：<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+		<input type="hidden" name="method" value="update"/>	
+	wasteid：<input type="text" name="wasteid" value="${form.wasteid }"/>
+	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
 	<br/>
-	Totalwaste：<input type="text" name="totalwaste" value="${form.Totalwaste }"/>
-	<span style="color: red; font-weight: 900">${errors.Totalwaste }</span>
+	countyid：<input type="text" name="countyid" value="${form.countyid }"/>
+	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
-	CountyID	：<input type="text" name="countyid" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
+	totalwaste：<input type="text" name="totalwaste" value="${form.totalwaste }"/>
+	<span style="color: red; font-weight: 900">${errors.totalwaste }</span>
 	<br/>
-	Organic	：<input type="text" name="organic" value="${form.Organic }"/>
-	<span style="color: red; font-weight: 900">${errors.Organic }</span>
-	<br/>
-	Plastic	：<input type="text" name="plastic" value="${form.Plastic }"/>
-	<span style="color: red; font-weight: 900">${errors.Plastic }</span>
-	<br/>
-	Metal	：<input type="text" name="metal" value="${form.Metal }"/>
-	<span style="color: red; font-weight: 900">${errors.Metal }</span>
-	<br/>
-	Glass	：<input type="text" name="glass" value="${form.Glass }"/>
-	<span style="color: red; font-weight: 900">${errors.Glass }</span>
-	<br/>
-	Paper	：<input type="text" name="paper" value="${form.Paper }"/>
-	<span style="color: red; font-weight: 900">${errors.Paper }</span>
-	<br/>
-	dayofsample	：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
+	dayofsample：<input type="text" name="dayofsample" value="${form.dayofsample }"/>
 	<span style="color: red; font-weight: 900">${errors.dayofsample }</span>
+	<br/>
+	organic	：<input type="text" name="organic" value="${form.organic }"/>
+	<span style="color: red; font-weight: 900">${errors.organic }</span>
+	<br/>
+	plastic	：<input type="text" name="plastic" value="${form.plastic }"/>
+	<span style="color: red; font-weight: 900">${errors.plastic }</span>
+	<br/>
+	metal	：<input type="text" name="metal" value="${form.metal }"/>
+	<span style="color: red; font-weight: 900">${errors.metal }</span>
+	<br/>
+	glass	：<input type="text" name="glass" value="${form.glass }"/>
+	<span style="color: red; font-weight: 900">${errors.glass }</span>
+	<br/>
+	paper	：<input type="text" name="paper" value="${form.paper }"/>
+	<span style="color: red; font-weight: 900">${errors.paper }</span>
 	<br/>
 	<input type="submit" value="Update Waste"/>
 </form>
 
 </body>
 </html>
-
