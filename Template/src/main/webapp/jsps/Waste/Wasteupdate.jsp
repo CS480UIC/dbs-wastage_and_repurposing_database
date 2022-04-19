@@ -22,11 +22,11 @@
   
   <body>
   <h1>Update Waste</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/WasteServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	
-	Update id	：<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	Update wasteid	：<input type="text" name="wasteid" value="${form.wasteid }"/>
+	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
 	<br/>
 	
 	<input type="submit" value="Update Waste"/>
