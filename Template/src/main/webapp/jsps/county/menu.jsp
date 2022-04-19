@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for County </h1>
     <br>
-	<a href="<c:url value='/jsps/County/Countycreate.jsp'/>" target="_parent">Create County</a> |&nbsp; 
-	<a href="<c:url value='/jsps/County/Countyread.jsp'/>" target="_parent">Read County</a> |&nbsp;
-	<a href="<c:url value='/jsps/County/Countyupdate.jsp'/>" target="_parent">Update County</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/County/Countydelete.jsp'/>" target="_parent">Delete County</a>	
+	<a href="<c:url value='/jsps/county/countycreate.jsp'/>" target="_parent">Create County</a> |&nbsp; 
+	<a href="<c:url value='/jsps/county/countyread.jsp'/>" target="_parent">Read County</a> |&nbsp;
+	<a href="<c:url value='/jsps/county/countyupdate.jsp'/>" target="_parent">Update County</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/county/countydelete.jsp'/>" target="_parent">Delete County</a>	
 	    
   </body>
 </html>

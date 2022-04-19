@@ -24,30 +24,30 @@
   <h1>Update County</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	CountyID    :<input type="text" name="CountyID" value="${County.CountyID }" disabled/>
+	county    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
 	<br/>
-	StateID：<input type="text" name="StateID" value="${County.StateID }" disabled/>
+	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
 	<br/>
-	CountyName	：<input type="text" name="CountyName" value="${County.CountyName }" disabled/>
+	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
 	<br/>
-	Population	：<input type="text" name="Population" value="${County.Population }" disabled/>
+	population	：<input type="text" name="population" value="${County.population }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/CountyServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${County.CountyID }"/>
-	CountyID：<input type="text" name="CountyID" value="${form.CountyID }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyID }</span>
+				<input type="hidden" name="countyid" value="${County.countyid }"/>
+	countyid：<input type="text" name="countyid" value="${form.countyid }"/>
+	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
-	StateID	：<input type="text" name="StateID" value="${form.StateID }"/>
-	<span style="color: red; font-weight: 900">${errors.StateID }</span>
+	stateid	：<input type="text" name="stateid" value="${form.stateid }"/>
+	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
-	CountyName	：<input type="text" name="CountyName" value="${form.CountyName }"/>
-	<span style="color: red; font-weight: 900">${errors.CountyName }</span>
+	countyname	：<input type="text" name="countyname" value="${form.countyname }"/>
+	<span style="color: red; font-weight: 900">${errors.countyname }</span>
 	<br/>
-	Population	：<input type="text" name="Population" value="${form.Population }"/>
-	<span style="color: red; font-weight: 900">${errors.Population }</span>
+	population	：<input type="text" name="population" value="${form.population }"/>
+	<span style="color: red; font-weight: 900">${errors.population }</span>
 	<br/>
 	<input type="submit" value="Update County"/>
 </form>

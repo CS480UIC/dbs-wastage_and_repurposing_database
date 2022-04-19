@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read County Output</title>
+    <title>Read Waste</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,20 @@
   </head>
   
   <body>
-  <h1>Read County Output</h1>
+  <h1>Read Waste</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	countyid    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
+<form action="<c:url value='/WasteServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	wasteid	：<input type="text" name="wasteid" value="${form.wasteid }"/>
+	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
 	<br/>
-	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
-	<br/>
-	population	：<input type="text" name="population" value="${County.population }" disabled/>
-	<br/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/> --%>
+	<input type="submit" value="Read Waste"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>

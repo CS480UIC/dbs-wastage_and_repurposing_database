@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read County Output</title>
+    <title>Update Waste</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,15 @@
   </head>
   
   <body>
-  <h1>Read County Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	countyid    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
+  <h1>Update Waste</h1>
+<form action="<c:url value='/WasteServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	
+	Update wasteid	：<input type="text" name="wasteid" value="${form.wasteid }"/>
+	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
 	<br/>
-	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
-	<br/>
-	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
-	<br/>
-	population	：<input type="text" name="population" value="${County.population }" disabled/>
-	<br/>
+	
+	<input type="submit" value="Update Waste"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read County Output</title>
+    <title>Read Waste Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,26 @@
   </head>
   
   <body>
-  <h1>Read County Output</h1>
+  <h1>Read Waste Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	countyid    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
+	wasteid    :<input type="text" name="wasteid" value="${Waste.wasteid }" disabled/>
+	<br/>	
+	countyid：<input type="text" name="countyid" value="${Waste.countyid }" disabled/>
 	<br/>
-	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
+	totalwaste    :<input type="text" name="totalwaste" value="${Waste.totalwaste }" disabled/>
 	<br/>
-	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
+	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
 	<br/>
-	population	：<input type="text" name="population" value="${County.population }" disabled/>
+	organic	：<input type="text" name="organic" value="${Waste.organic }" disabled/>
+	<br/>
+    plastic	：<input type="text" name="plastic" value="${Waste.plastic }" disabled/>
+	<br/>
+	metal	：<input type="text" name="metal" value="${Waste.metal }" disabled/>
+	<br/>
+	glass	：<input type="text" name="glass" value="${Waste.glass }" disabled/>
+	<br/>
+	paper	：<input type="text" name="paper" value="${Waste.paper }" disabled/>
 	<br/>
 </form>
 

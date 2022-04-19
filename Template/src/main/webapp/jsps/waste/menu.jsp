@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Read County Output</title>
+    <title>Waste</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +22,12 @@
   </head>
   
   <body>
-  <h1>Read County Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	countyid    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
-	<br/>
-	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
-	<br/>
-	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
-	<br/>
-	population	：<input type="text" name="population" value="${County.population }" disabled/>
-	<br/>
-</form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+    <h1>CRUD operations for Waste</h1>
+    <br>
+	<a href="<c:url value='/jsps/waste/wastecreate.jsp'/>" target="_parent">Create Waste</a> |&nbsp; 
+	<a href="<c:url value='/jsps/waste/wasteread.jsp'/>" target="_parent">Read Waste</a> |&nbsp;
+	<a href="<c:url value='/jsps/waste/wasteupdate.jsp'/>" target="_parent">Update Waste</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/waste/wastedelete.jsp'/>" target="_parent">Delete Waste</a>	
+	    
+  </body>
 </html>

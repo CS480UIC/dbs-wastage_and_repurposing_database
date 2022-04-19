@@ -25,15 +25,15 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/CountyServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="CountyID" value="${County.CountyID }"/>
-	CountyID    :<input type="text" name="CountyID" value="${County.CountyID }" disabled/>
+		<input type="hidden" name="countyid" value="${County.countyid }"/>
+	countyid    :<input type="text" name="countyid" value="${County.countyid }" disabled/>
 	<br/>
 	
-	StateID：<input type="text" name="StateID" value="${County.StateID }" disabled/>
+	stateid：<input type="text" name="stateid" value="${County.stateid }" disabled/>
 	<br/>
-	CountyName	：<input type="text" name="CountyName" value="${County.CountyName }" disabled/>
+	countyname	：<input type="text" name="countyname" value="${County.countyname }" disabled/>
 	<br/>
-	Population	：<input type="text" name="Population" value="${County.Population }" disabled/>
+	population	：<input type="text" name="population" value="${County.population }" disabled/>
 	<br/>
 	<input type="submit" value="Delete County"/>
 </form>

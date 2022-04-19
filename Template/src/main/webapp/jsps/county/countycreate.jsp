@@ -23,11 +23,11 @@
   <body>
   <h1>County Create</h1>
 <form action="<c:url value='/CountyServletCreate'/>" method="post">
-	countyID    :<input type="text" name="countyid" value="${form.countyID }"/>
-	<span style="color: red; font-weight: 900">${errors.countyID }</span>
+	countyid:<input type="text" name="countyid" value="${form.countyid }"/>
+	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
-	stateID：<input type="text" name="stateid" value="${form.stateID }"/>
-	<span style="color: red; font-weight: 900">${errors.stateID }</span>
+	stateid：<input type="text" name="stateid" value="${form.stateid }"/>
+	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
 	countyname	：<input type="text" name="countyname" value="${form.countyname }"/>
 	<span style="color: red; font-weight: 900">${errors.countyname }</span>
