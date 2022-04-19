@@ -24,29 +24,26 @@
   <h1>Read Waste Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-
-	id    :<input type="text" name="id" value="${Waste.id }" disabled/>
+	wasteid    :<input type="text" name="wasteid" value="${Waste.wasteid }" disabled/>
+	<br/>	
+	countyid：<input type="text" name="countyid" value="${Waste.countyid }" disabled/>
 	<br/>
-	Totalwaste    :<input type="text" name="Totalwaste" value="${Waste.Totalwaste }" disabled/>
-	<br/>
-	
-	CountyID：<input type="text" name="countyid" value="${Waste.CountyID }" disabled/>
-	<br/>
-	Organic	：<input type="text" name="organic" value="${Waste.Organic }" disabled/>
-	<br/>
-    Plastic	：<input type="text" name="plastic" value="${Waste.Plastic }" disabled/>
-	<br/>
-	Metal	：<input type="text" name="metal" value="${Waste.Metal }" disabled/>
-	<br/>
-	Glass	：<input type="text" name="glass" value="${Waste.Glass }" disabled/>
-	<br/>
-	Paper	：<input type="text" name="paper" value="${Waste.Paper }" disabled/>
+	totalwaste    :<input type="text" name="totalwaste" value="${Waste.totalwaste }" disabled/>
 	<br/>
 	dayofsample	：<input type="text" name="dayofsample" value="${Waste.dayofsample }" disabled/>
+	<br/>
+	organic	：<input type="text" name="organic" value="${Waste.organic }" disabled/>
+	<br/>
+    plastic	：<input type="text" name="plastic" value="${Waste.plastic }" disabled/>
+	<br/>
+	metal	：<input type="text" name="metal" value="${Waste.metal }" disabled/>
+	<br/>
+	glass	：<input type="text" name="glass" value="${Waste.glass }" disabled/>
+	<br/>
+	paper	：<input type="text" name="paper" value="${Waste.paper }" disabled/>
 	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>
-
