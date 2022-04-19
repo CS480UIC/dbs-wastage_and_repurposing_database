@@ -238,6 +238,95 @@
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>WasteServletCreate</display-name>
+    <servlet-name>WasteServletCreate</servlet-name>
+    <servlet-class>waste.web.servlet.WasteServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteServletCreate</servlet-name>
+    <url-pattern>/WasteServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>WasteServletRead</display-name>
+    <servlet-name>WasteServletRead</servlet-name>
+    <servlet-class>waste.web.servlet.WasteServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteServletRead</servlet-name>
+    <url-pattern>/WasteServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>WasteServletUpdate</display-name>
+    <servlet-name>WasteServletUpdate</servlet-name>
+    <servlet-class>waste.web.servlet.WasteServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteServletUpdate</servlet-name>
+    <url-pattern>/WasteServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>WasteServletDelete</display-name>
+    <servlet-name>WasteServletDelete</servlet-name>
+    <servlet-class>waste.web.servlet.WasteServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WasteServletDelete</servlet-name>
+    <url-pattern>/WasteServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>CountyServletCreate</display-name>
+    <servlet-name>CountyServletCreate</servlet-name>
+    <servlet-class>county.web.servlet.CountyServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountyServletCreate</servlet-name>
+    <url-pattern>/CountyServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>CountyServletRead</display-name>
+    <servlet-name>CountyServletRead</servlet-name>
+    <servlet-class>county.web.servlet.CountyServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountyServletRead</servlet-name>
+    <url-pattern>/CountyServletRead</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>CountyServletUpdate</display-name>
+    <servlet-name>CountyServletUpdate</servlet-name>
+    <servlet-class>county.web.servlet.CountyServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountyServletUpdate</servlet-name>
+    <url-pattern>/CountyServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>CountyServletDelete</display-name>
+    <servlet-name>CountyServletDelete</servlet-name>
+    <servlet-class>county.web.servlet.CountyServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountyServletDelete</servlet-name>
+    <url-pattern>/CountyServletDelete</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
