@@ -1,6 +1,8 @@
 package waste.service;
 
 
+import java.util.List;
+
 import waste.dao.WasteDao;
 import waste.domain.Waste;
 
@@ -26,5 +28,8 @@ public class WasteService {
 		if(entity1.getwasteid() != null && entity1.getwasteid() == form.getwasteid()) throw new WasteException("This waste has been registered!");
 		wasteDao.add(form);
 	}
-
+	public List<Object> findidandtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return wasteDao.findidandtotal();
+		
+	}
 }
