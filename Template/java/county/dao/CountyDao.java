@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import county.domain.County;
+import county.domain.countyTotal;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -112,5 +113,27 @@ public class CountyDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findnameandtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			String sql = "select countyname, totalwaste from county join waste on county.countyid = waste.countyid";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				countyTotal compQuery = new countyTotal();
+				compQuery.setCountyname(resultSet.getString("countyname"));
+				compQuery.setTotalwaste(Integer.parseInt(resultSet.getString("totalwaste")));
+	    		list.add(compQuery);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
