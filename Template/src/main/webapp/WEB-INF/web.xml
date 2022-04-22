@@ -339,6 +339,30 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>findIDandTotal</display-name>
+    <servlet-name>findIDandTotal</servlet-name>
+    
+    <servlet-class>waste.web.servlet.findIDandTotal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findIDandTotal</servlet-name>
+    <url-pattern>/findIDandTotal</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>findNameandTotal</display-name>
+    <servlet-name>findNameandTotal</servlet-name>
+    
+    <servlet-class>county.web.servlet.findNameandTotal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findNameandTotal</servlet-name>
+    <url-pattern>/findNameandTotal</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
