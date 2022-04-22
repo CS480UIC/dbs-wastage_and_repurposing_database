@@ -1,6 +1,8 @@
 package county.service;
 
 
+import java.util.List;
+
 import county.dao.CountyDao;
 import county.domain.County;
 
@@ -35,4 +37,8 @@ public class CountyService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
+	public List<Object> findnameandtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.findnameandtotal();
+		
+	}
 }
