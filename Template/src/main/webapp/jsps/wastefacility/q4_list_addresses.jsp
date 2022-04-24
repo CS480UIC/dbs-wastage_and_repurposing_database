@@ -8,18 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> totalwaste and Countyid </h3>
+	<h3 align="center"> Address Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>countyid</th>
-		<th>dayofsample</th>
-		<th>totalwaste</th>
+		<th>Facility ID</th>
+		<th>Address</th>
 	</tr>
-<c:forEach items="${WasteList}" var="waste">
+<c:forEach items="${AddressList}" var="facility">
 	<tr>
-		<td>${waste.countyid}</td>
-		<td>${waste.dayofsample}</td>
-		<td>${waste.totalwaste}</td>
+		<td>${facility.facilityid}</td>
+		<td>${facility.address}</td>
 	</tr>
 </c:forEach>
 </table>

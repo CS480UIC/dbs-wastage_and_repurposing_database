@@ -8,18 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> totalwaste and Countyid </h3>
+	<h3 align="center"> County ID and Sum of Waste </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>countyid</th>
-		<th>dayofsample</th>
-		<th>totalwaste</th>
+		<th>sumtotalwaste</th>
 	</tr>
-<c:forEach items="${WasteList}" var="waste">
+<c:forEach items="${SumWasteList}" var="waste">
 	<tr>
 		<td>${waste.countyid}</td>
-		<td>${waste.dayofsample}</td>
-		<td>${waste.totalwaste}</td>
+		<td>${waste.sumtotalwaste}</td>
 	</tr>
 </c:forEach>
 </table>

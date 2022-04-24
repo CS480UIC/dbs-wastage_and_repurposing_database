@@ -8,18 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> totalwaste and Countyid </h3>
+	<h3 align="center"> Counties with Below Average Population </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>countyid</th>
-		<th>dayofsample</th>
-		<th>totalwaste</th>
+		<th>countyname</th>
+		<th>stateid</th>
 	</tr>
-<c:forEach items="${WasteList}" var="waste">
+<c:forEach items="${HighPopList}" var="county">
 	<tr>
-		<td>${waste.countyid}</td>
-		<td>${waste.dayofsample}</td>
-		<td>${waste.totalwaste}</td>
+		<td>${county.countyname}</td>
+		<td>${county.stateid}</td>
 	</tr>
 </c:forEach>
 </table>

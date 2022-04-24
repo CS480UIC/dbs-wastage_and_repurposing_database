@@ -24,9 +24,14 @@
   <body>
     <h1>List of Queries</h1>
     <br>
-    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
- 	<a href="<c:url value='/findIDandTotal'/>" target="body">Please list the countyid and totalwaste of waste</a>&nbsp;&nbsp;
- 	<a href="<c:url value='/findNameandTotal'/>" target="body">Please list the countyname and totalwaste of county</a>&nbsp;&nbsp;
-    
+    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table<br></a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findIDandTotal'/>" target="body">Please list the countyid and totalwaste of waste<br></a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findAddresses'/>" target="body">Please list the facilityid and address of wastefacility<br></a>&nbsp;&nbsp;
+ 	
+ 	<a href="<c:url value='/findIDandSumTotal'/>" target="body">Please list the countyid and sum of their totalwaste of waste<br></a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findLowPop'/>" target="body">Please list the countyname and stateid of county with below average population<br></a>&nbsp;&nbsp;
+ 	
+ 	<a href="<c:url value='/findNameandTotal'/>" target="body">Please list the countyname and totalwaste of county<br></a>&nbsp;&nbsp;
+    <a href="<c:url value='/findCountywithFacility'/>" target="body">Please list the countynames that have facilities from county<br></a>&nbsp;&nbsp;
   </body>
 </html>
