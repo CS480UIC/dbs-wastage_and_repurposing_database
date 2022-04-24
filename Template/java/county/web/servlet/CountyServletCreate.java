@@ -1,4 +1,4 @@
-package wastefacility.web.servlet;
+package county.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import wastefacility.domain.WasteFacility;
-import wastefacility.service.WasteFacilityException;
-import wastefacility.service.CountyService;
+import county.domain.County;
+import county.service.CountyException;
+import county.service.CountyService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class WasteFacilityServletCreate extends HttpServlet {
+public class CountyServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WasteFacilityServletCreate() {
+    public CountyServletCreate() {
         super();
         // TODO Auto-generated constructor stub
         
@@ -43,45 +43,35 @@ public class WasteFacilityServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CountyService stateservice = new CountyService();
+		CountyService entity1service = new CountyService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		WasteFacility form = new WasteFacility();
+		County form = new County();
 		List<String> info = new ArrayList<String>();
-		System.out.println(form);
-		
+		//System.out.println(form);
 		for(String name : paramMap.keySet()) {
 			
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
-			System.out.println(name + ": " + Arrays.toString(values));
-			System.out.println(info.add(values[0]));
+			//System.out.println(name + ": " + Arrays.toString(values));
+			//System.out.println(info.add(values[0]));
 
 		}
-		System.out.println("1");
-		System.out.println(info);
 
-		form.setFacilityid(Integer.parseInt(info.get(1)));
+		form.setCountyid(Integer.parseInt(info.get(0)));
 //		System.out.println("1");
-//		System.out.println(info.get(1));
-		form.setCountyid(Integer.parseInt(info.get(3)));
-		
-		
-		form.setAddress(info.get(5));
+		form.setStateid(Integer.parseInt(info.get(1)));
 //		System.out.println("2");
-//		System.out.println(info.get(2));
-		
-		
-		form.setRecycleordump(Integer.parseInt(info.get(7)));		
+		form.setCountyname(info.get(2));		
 //		System.out.println("3");
-//		System.out.println(info.get(3));
+		form.setPopulation(Integer.parseInt(info.get(3)));
 		
 		
 		try {
 			System.out.println("3");
-			stateservice.create(form);
+			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | WasteFacilityException e) {
+		} catch (ClassNotFoundException | CountyException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

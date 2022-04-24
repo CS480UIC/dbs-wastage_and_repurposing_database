@@ -5,9 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import wastefacility.domain.wastefacilityTotal;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -117,5 +118,27 @@ public class WasteFacilityDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findAddresses() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "SELECT facilityid, address FROM wastage_and_repurposing_database.waste_facility WHERE  facilityid != 3 order by address;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				wastefacilityTotal compQuery = new wastefacilityTotal();
+				compQuery.setFacilityid(resultSet.getInt("facilityid"));
+				compQuery.setAddress(resultSet.getString("address"));
+	    		list.add(compQuery);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

@@ -1,6 +1,7 @@
 package waste.service;
 
 
+import java.text.ParseException;
 import java.util.List;
 
 import waste.dao.WasteDao;
@@ -24,12 +25,14 @@ public class WasteService {
 	public void create(Waste form) throws WasteException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the primary key of Entity1
-		Waste entity1 = wasteDao.findBywasteid(form.getwasteid());
-		if(entity1.getwasteid() != null && entity1.getwasteid() == form.getwasteid()) throw new WasteException("This waste has been registered!");
+		Waste waste = wasteDao.findBywasteid(form.getwasteid());
+		if(waste.getwasteid() != null && waste.getwasteid() == form.getwasteid()) throw new WasteException("This waste has been registered!");
 		wasteDao.add(form);
 	}
 	public List<Object> findidandtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		return wasteDao.findidandtotal();
-		
+	}
+	public List<Object> findidandsumtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return wasteDao.findidandsumtotal();
 	}
 }

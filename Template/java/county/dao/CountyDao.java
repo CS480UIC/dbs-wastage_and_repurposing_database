@@ -12,7 +12,9 @@ import java.util.List;
 //import java.util.List;
 
 import county.domain.County;
-import county.domain.countyTotal;
+import county.domain.wastefacilityTotal;
+import county.domain.countyfacilityTotal;
+import county.domain.countyPop;
 import user.domain.User;
 
 /**
@@ -24,7 +26,7 @@ public class CountyDao {
 		County entity1 = new County();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 		    String sql = "select * from county where countyid=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,countyid);
@@ -58,7 +60,7 @@ public class CountyDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "insert into county values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -80,7 +82,7 @@ public class CountyDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "UPDATE county SET stateid = ?, countyname = ?, population = ? where countyid = ?;";
 			System.out.println("Update Executed");
@@ -101,7 +103,7 @@ public class CountyDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "delete from county where countyid = ?";
 			System.out.println(countyid);
@@ -119,14 +121,60 @@ public class CountyDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
-			String sql = "select countyname, totalwaste from county join waste on county.countyid = waste.countyid";
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "select countyname, sum(totalwaste) as totalwaste from county join waste on county.countyid = waste.countyid group by countyname";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				countyTotal compQuery = new countyTotal();
+				wastefacilityTotal compQuery = new wastefacilityTotal();
 				compQuery.setCountyname(resultSet.getString("countyname"));
 				compQuery.setTotalwaste(Integer.parseInt(resultSet.getString("totalwaste")));
+	    		list.add(compQuery);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	public List<Object> findcountywithfacility() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "SELECT countyname, count(facilityid) as facilities FROM county c inner join waste_facility wf on wf.countyid = c.countyid WHERE EXISTS (SELECT facilityid FROM waste_facility wf WHERE wf.countyid = c.countyid) group by countyname";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				countyfacilityTotal compQuery = new countyfacilityTotal();
+				compQuery.setCountyname(resultSet.getString("countyname"));
+				compQuery.setFacilities(Integer.parseInt(resultSet.getString("facilities")));
+	    		list.add(compQuery);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	
+	
+	public List<Object> findlowpop() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "SELECT countyname, stateid FROM county c where population < (SELECT AVG(population) FROM county) GROUP BY countyname;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				countyPop compQuery = new countyPop();
+				compQuery.setCountyname(resultSet.getString("countyname"));
+				compQuery.setStateid(Integer.parseInt(resultSet.getString("stateid")));
 	    		list.add(compQuery);
 			 }
 			connect.close();

@@ -12,7 +12,7 @@ import county.domain.County;
  *
  */
 public class CountyService {
-	private CountyDao entity1Dao = new CountyDao();
+	private CountyDao countyDao = new CountyDao();
 	
 	/**
 	 * register a Entity1
@@ -26,7 +26,7 @@ public class CountyService {
 		// check the primary key of Entity1
 		County entity1 = CountyDao.findBycountyid(form.getCountyid());
 		if(entity1.getCountyid()!=null && entity1.getCountyid() == form.getCountyid()) throw new CountyException("This user name has been registered!");
-		entity1Dao.add(form);
+		countyDao.add(form);
 	}
 	/**
 	 * Login function
@@ -38,7 +38,19 @@ public class CountyService {
 	 * @throws InstantiationException 
 	 */
 	public List<Object> findnameandtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		return entity1Dao.findnameandtotal();
+		return countyDao.findnameandtotal();
+		
+	}
+	
+	public List<Object> findcountywithfacility() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return countyDao.findcountywithfacility();
+		
+	}
+	
+	
+	
+	public List<Object> findlowpop() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return countyDao.findlowpop();
 		
 	}
 }

@@ -7,14 +7,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; 
 
-import user.domain.User;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import waste.domain.Waste;
+import waste.domain.wasteTotal;
 
 /**
  * DDL functions performed in database
@@ -25,7 +25,7 @@ public class WasteDao {
 		Waste waste = new Waste();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 		    String sql = "select * from waste where wasteid=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,wasteid);
@@ -64,7 +64,7 @@ public class WasteDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "insert into waste values(?,?,?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -91,7 +91,7 @@ public class WasteDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "UPDATE waste SET countyid = ?, totalwaste = ?, dayofsample = ?, organic = ?, plastic = ?, metal = ?, glass = ?, paper = ? where wasteid = ?;";
 			System.out.println("Update Executed");
@@ -117,7 +117,7 @@ public class WasteDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
 			
 			String sql = "delete from waste where wasteid = ?";
 			System.out.println(wasteid);
@@ -135,14 +135,40 @@ public class WasteDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","root", "Fr3eBuRdDd!@qQ");
-			String sql = "select countyid, totalwaste from waste order by totalwaste";
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "select countyid, dayofsample, totalwaste from waste order by totalwaste desc";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				Waste waste = new Waste();
 				waste.setcountyid(Integer.parseInt(resultSet.getString("countyid")));
+				waste.setdayofsample(java.sql.Date.valueOf(resultSet.getString("dayofsample")));
 				waste.settotalwaste(Integer.parseInt(resultSet.getString("totalwaste")));
+	    		list.add(waste);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	
+	
+	public List<Object> findidandsumtotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/wastage_and_repurposing_database","Alex", "123456");
+			String sql = "select countyid, sum(totalwaste) as sumtotalwaste from waste group by countyid";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				wasteTotal waste = new wasteTotal();
+//				System.out.println(Integer.parseInt(resultSet.getString("countyid")) + " " + Integer.parseInt(resultSet.getString("sumtotalwaste")));
+				waste.setCountyid(Integer.parseInt(resultSet.getString("countyid")));
+				waste.setSumtotalwaste(Integer.parseInt(resultSet.getString("sumtotalwaste")));
 	    		list.add(waste);
 			 }
 			connect.close();
