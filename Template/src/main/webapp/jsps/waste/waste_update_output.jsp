@@ -46,9 +46,6 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/WasteServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>	
-	wasteid：<input type="text" name="wasteid" value="${form.wasteid }"/>
-	<span style="color: red; font-weight: 900">${errors.wasteid }</span>
-	<br/>
 	countyid：<input type="text" name="countyid" value="${form.countyid }"/>
 	<span style="color: red; font-weight: 900">${errors.countyid }</span>
 	<br/>
