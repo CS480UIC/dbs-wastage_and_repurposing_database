@@ -37,9 +37,6 @@
 <form action="<c:url value='/CountyServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="countyid" value="${County.countyid }"/>
-	countyid：<input type="text" name="countyid" value="${form.countyid }"/>
-	<span style="color: red; font-weight: 900">${errors.countyid }</span>
-	<br/>
 	stateid	：<input type="text" name="stateid" value="${form.stateid }"/>
 	<span style="color: red; font-weight: 900">${errors.stateid }</span>
 	<br/>
